@@ -5,20 +5,29 @@
   margin-left: 60px;
   margin-right: 60px;
 }
+
+.Nav-link-home {
+  text-decoration: none;
+  color: inherit
+}
 .Nav-links{
   display: flex;
   flex-direction: row;
 }
 
-.Nav-links p {
+.Nav-links a {
   margin-left: 20px ;
+  color: inherit;
 }
+
 
 .Articles {
   text-align: center;
 }
 
 .Article-Apercu {
-  margin-left: 200px;
-  margin-right: 200px
+  /* margin-left: 200px;
+  margin-right: 200px */
+  width: 30%;
+  margin: auto;
 }
