@@ -1,6 +1,8 @@
 import React from "react";
 
 const Upload = () => {
+
+    
     return(
         <h1>
             WELCOME UPLOAD 

@@ -1,20 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
     return(
         <header className="App-header">
             <div className='Logo'>
-            <a className='Nav-link-home' href='/'>
+            <Link className='Nav-link-home' to='/'>
             LOGO
-            </a>
+            </Link> 
             </div>
             <div className='Nav-links'>
-            <a className='Nav-link'  href='/upload'>
+            <Link className='Nav-link'  to='/upload'>
                 Upload
-            </a>
-            <a className='Nav-link' href='/galery'>
+            </Link>
+            <Link className='Nav-link' to='/galery'>
                 Galery
-            </a>
+            </Link>
             </div>
         </header>
     )

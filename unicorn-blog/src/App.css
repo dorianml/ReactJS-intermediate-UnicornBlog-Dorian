@@ -4,6 +4,7 @@
   margin-top: 20px;
   margin-left: 60px;
   margin-right: 60px;
+  margin-bottom: 60px;
 }
 
 .Nav-link-home {
@@ -20,14 +21,23 @@
   color: inherit;
 }
 
+.Searchbar-Input {
+  width: 50%;
+}
+
+.Articles-apercu-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
 
 .Articles {
   text-align: center;
 }
 
 .Article-Apercu {
-  /* margin-left: 200px;
-  margin-right: 200px */
-  width: 30%;
+  width: 50%;
   margin: auto;
 }
