@@ -1,7 +1,10 @@
 
 import React, {useState, useEffect} from 'react';
-import ReadMoreReadLess from './ReadMoreReadLess';
+import { Link, useParams } from 'react-router-dom'
+
 import SearchBar from './SearchBar';
+import New_Article from "./New_Article";
+
 
 const Home = () => {
 
@@ -20,7 +23,7 @@ const Home = () => {
             return result
         })
         }, [])
-        
+
         ///// SEARCH BAR FEATURES ///// 
 
 const [SearchText, setSearchText] = useState('')
@@ -33,23 +36,27 @@ const searchFilter = () => {
     const FilterArticles = articles.filter( e => 
     e.body.includes(SearchText) || e.title.includes(SearchText))
     setArticles(FilterArticles)
-}
+}   
+
     return (
         <div className='Articles-apercu-section' >
             <SearchBar className='SearchBar' handleSearchText={handleSearchText} value={SearchText}/>
             <div className='Article-Apercu'>
-                {articles.map((article, index) => {
+                {articles.map((article) => {
                     return(
-                    <ReadMoreReadLess>
-                        <div key={index}>
+                        <div key={article.id}>
                             <h4 className='article-apercu-title'>
                                 {article.title}
                             </h4>
                             <p className='article-apercu-body'>
                                 {article.body.substring(0, 80)}
                             </p>
+
+                                <Link to={`/article/${article.id}`}>
+                                        Afficher plus...
+                                </Link> 
+
                         </div>
-                    </ReadMoreReadLess>
                 )})}
             </div>
         </div>

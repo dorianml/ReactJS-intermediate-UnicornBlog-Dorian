@@ -6,7 +6,7 @@ const Galery = () => {
     const [Images, setImages] = useState([])
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/photos  ')
+        fetch('https://jsonplaceholder.typicode.com/photos')
         .then((response) => {
             console.log('API CONNECTED')
             return response.json()
@@ -26,9 +26,8 @@ const Galery = () => {
         <div>
            {Images.map((image, index) => {
                 return(
-                    <div key={index} className='image'>
-                    {image}
-                    </div> 
+                    <img key={index} src={image.url} className='image'>
+                    </img>
                 )
            })}
         </div>

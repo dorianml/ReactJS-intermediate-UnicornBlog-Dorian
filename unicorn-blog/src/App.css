@@ -41,3 +41,19 @@
   width: 50%;
   margin: auto;
 }
+
+.image{
+width: 20%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-article {
+  height: 200px;
+}
