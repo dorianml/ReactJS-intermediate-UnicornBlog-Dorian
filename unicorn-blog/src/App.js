@@ -22,13 +22,11 @@ const App = () => {
               </Route>
               <Route  exact path="/upload"> 
                 <Upload />
-              </Route>
+              </Route>  
               <Route exact path="/galery"> 
                 <Galery />
               </Route>
-              <Route exact path='/article/:id'> 
-                <Article />
-              </Route>
+              <Route exact path='/article/:id' component={Article}/> 
             </Switch>          
           </section> 
       </div>

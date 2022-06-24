@@ -1,10 +1,11 @@
-import { React, useEffect, useState, useParams } from "react";
-import { Link } from "react-router-dom";
+import { React, useEffect, useState} from "react";
+import { Link, useParams } from "react-router-dom";
 
 const Article = () => {
 
-    const [article, setArticle] = useState([])
     const {id} = useParams()
+    
+    const [article, setArticle] = useState([])
     
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
@@ -16,15 +17,13 @@ const Article = () => {
             setArticle(solo_article)
             console.log('SET API UPDATE')
         })
-    }, [id])
+    }, [])
     
-    return (
+        return (
         <div className="Articles">
-            <button>
-                <Link to={'/'} >
+                <Link className="Back-button" to={'/'} >
                        retour
                 </Link> 
-            </button>
             <div className='Article-Apercu'>
                 <h4 className='article-apercu-title'>
                     {article.title}

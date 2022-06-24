@@ -51,7 +51,6 @@ const searchFilter = () => {
                             <p className='article-apercu-body'>
                                 {article.body.substring(0, 80)}
                             </p>
-
                                 <Link to={`/article/${article.id}`}>
                                         Afficher plus...
                                 </Link> 

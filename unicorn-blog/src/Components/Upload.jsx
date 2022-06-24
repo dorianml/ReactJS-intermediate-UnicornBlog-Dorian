@@ -2,10 +2,8 @@ import React, { useState } from "react";
 
 const Upload = () => {
     
-    
-    const [PostDone, setPostDone] = useState(false)
-    
     const [FormResult, setFormResult] = useState({userId: 1})
+    const [PostDone, setPostDone] = useState(false)
     
     const handleChange = (e) => {
         console.log('OK')
@@ -30,8 +28,8 @@ const Upload = () => {
         console.log('API POST OK')
         return response.json()
         })
-        .then((res) => {
-            console.log(res)
+        .then((result) => {
+            console.log(result)
             setPostDone(true)
         })
     }
@@ -46,10 +44,9 @@ const Upload = () => {
             <input onChange={handleChange} className="form-article" placeholder='mon article ici...' name="body" />
             <button onClick={handleSubmit}> Post </button>
             <div className="Post-Ok-Message">
-                {PostDone ? <p> Post Envoyé !</p> : null}
+                {PostDone ? <p> Post Envoyé !</p> : <p> Erreur lors de l'envoi </p>}
             </div>
        </form>
-           
        </>
     )
 }
