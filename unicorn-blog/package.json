@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "homepage": "http://MON_USERNAME.github.io/LE_NOM_DE_MON_APP"
+    "homepage": "http://MON_USERNAME.github.io/LE_NOM_DE_MON_APP",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/material": "^5.8.5",
